@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "589816098019",
+    "project_id": "doctors-education-points",
+    "storage_bucket": "doctors-education-points.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589816098019:android:6d4a78374a013095c7e9d6",
+        "android_client_info": {
+          "package_name": "com.example.doctors_education_points"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEzub54S6vaD5ylUBGXYazzL_3o8Y45II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
