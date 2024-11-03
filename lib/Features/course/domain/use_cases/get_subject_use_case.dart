@@ -10,8 +10,8 @@ class GetSubjectUseCase {
 
   GetSubjectUseCase(this.repository);
 
-  Future<List<SubjectEntity>> call() {
-    return repository.getSubjects();
+  Future<List<SubjectEntity>> call( String documentId ) {
+    return repository.getSubjectsByCourseId(documentId);
   }
 
 }

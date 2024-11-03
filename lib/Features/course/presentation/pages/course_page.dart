@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/course_bloc/course_bloc.dart';
 import '../blocs/course_bloc/course_event.dart';
 import '../blocs/course_bloc/course_state.dart';
+import 'subject_page.dart'; // Import SubjectPage
 
 class CoursePage extends StatelessWidget {
   @override
@@ -31,7 +32,13 @@ class CoursePage extends StatelessWidget {
                   title: Text(course.name),
                   subtitle: Text(course.documentId),
                   onTap: () {
-                    // Navigate to modules or lectures
+                    print('courseId ${course.courseId} documentId ${course.documentId}');
+                    // Navigate to SubjectPage with the course ID
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => SubjectPage(documentId: course.documentId,),
+                      ),
+                    );
                   },
                 );
               },

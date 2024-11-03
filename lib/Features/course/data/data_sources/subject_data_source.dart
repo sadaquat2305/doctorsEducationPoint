@@ -12,8 +12,12 @@ class SubjectDataSourceImpl {
 
 
 
-  Future<List<SubjectEntity>> fetchSubjects() async {
-    final querySnapshot = await firestore.collection('courses').get();
+
+
+
+  Future<List<SubjectEntity>> getSubjectsByCourseId(  String documentId ) async {
+    final querySnapshot = await firestore.collection('courses')
+        .doc(documentId).collection('subjects').get(); // courseId is dynamic
     return querySnapshot.docs.map((doc) {
       return SubjectEntity(
         subjectId: doc['subjectId'],

@@ -6,6 +6,8 @@ import 'package:doctors_education_points/Features/course/domain/entities/subject
 import '../entities/course_entity.dart';
 
 abstract class SubjectRepository {
-  Future<List<SubjectEntity>> getSubjects();
+  Future<List<SubjectEntity>> getSubjectsByCourseId(String documentId);
+
+
 }
 
